@@ -1,6 +1,5 @@
 'use strict';
 
-// ==================== NAVIGASI MOBILE ====================
 const navToggle = document.querySelector('#nav-toggle');
 const siteNav = document.querySelector('.site-nav');
 
@@ -10,7 +9,6 @@ navToggle.addEventListener('click', () => {
   siteNav.classList.toggle('nav-open');
 });
 
-// ==================== DAFTAR FITUR DINAMIS ====================
 const fiturData = [
   { nama: 'Workshop', deskripsi: 'Latihan praktis dengan topik teknologi, desain, dan karier.' },
   { nama: 'Komunitas', deskripsi: 'Ruang diskusi, kolaborasi, dan membangun koneksi baru.' },
@@ -40,7 +38,6 @@ function renderFitur(data) {
 
 renderFitur(fiturData);
 
-// ==================== FILTER FITUR ====================
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 filterBtns.forEach((btn) => {
@@ -81,7 +78,6 @@ faqItems.forEach((item) => {
   });
 });
 
-// ==================== FORM KONTAK ====================
 const form = document.querySelector('#form-kontak');
 const inputNama = document.querySelector('#kontak-nama');
 const inputEmail = document.querySelector('#kontak-email');
@@ -129,7 +125,6 @@ form.addEventListener('submit', (event) => {
   }
 });
 
-// ==================== KEMBALI KE ATAS ====================
 const tombolAtas = document.querySelector('#ke-atas');
 
 window.addEventListener('scroll', () => {
@@ -140,7 +135,7 @@ tombolAtas.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ==================== TEMA GELAP ====================
+//theme
 const tombolTema = document.querySelector('#toggle-tema');
 
 tombolTema.addEventListener('click', () => {

@@ -915,7 +915,7 @@ body.tema-gelap ::placeholder {
   cursor: pointer;
 }
 
-//responsive
+/* responsive */
 @media (max-width: 860px) {
   .nav-wrap {
     align-items: flex-start;
