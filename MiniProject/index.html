@@ -13,10 +13,13 @@
       <a class="brand" href="#home" aria-label="CampusFlow beranda">
         <span>CampusFlow</span>
       </a>
+      <button id="nav-toggle" aria-expanded="false" aria-label="Buka menu">☰</button>
       <nav class="site-nav" aria-label="Navigasi utama">
         <a href="#kegiatan">Kegiatan</a>
         <a href="#manfaat">Manfaat</a>
         <a href="#cara-daftar">Cara Daftar</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
         <a class="nav-cta" href="#daftar">Gabung Sekarang</a>
       </nav>
     </div>
@@ -67,23 +70,14 @@
           <p>Mulai dari belajar skill baru sampai bertemu komunitas yang sefrekuensi.</p>
         </div>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">01</div>
-            <h3>Workshop</h3>
-            <p>Latihan praktis dengan topik teknologi, desain, dan karier yang relevan untuk mahasiswa.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">02</div>
-            <h3>Komunitas</h3>
-            <p>Temukan ruang untuk diskusi, kolaborasi, dan membangun koneksi baru di kampus.</p>
-          </article>
-          <article class="feature-card">
-            <div class="feature-icon" aria-hidden="true">03</div>
-            <h3>Challenge</h3>
-            <p>Uji kemampuan lewat tantangan singkat dan bawa pulang pengalaman yang bisa ditunjukkan.</p>
-          </article>
+        <div class="filter-wrap">
+          <button class="filter-btn filter-aktif" data-filter="semua">Semua</button>
+          <button class="filter-btn" data-filter="workshop">Workshop</button>
+          <button class="filter-btn" data-filter="komunitas">Komunitas</button>
+          <button class="filter-btn" data-filter="challenge">Challenge</button>
         </div>
+
+        <div id="daftar-fitur" class="feature-grid"></div>
       </div>
     </section>
 
@@ -127,6 +121,65 @@
       </div>
     </section>
 
+    <section id="faq" class="section section-soft" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <p class="eyebrow">Pertanyaan Umum</p>
+            <h2 id="faq-title">Ada yang ingin kamu tanyakan?</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-tombol" aria-expanded="false">Apakah semua kegiatan gratis?</button>
+            <div class="faq-jawaban" hidden><p>Ya, semua kegiatan di CampusFlow gratis untuk mahasiswa aktif.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-tombol" aria-expanded="false">Siapa yang bisa mendaftar?</button>
+            <div class="faq-jawaban" hidden><p>Semua mahasiswa aktif kampus dapat mendaftar tanpa syarat khusus.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-tombol" aria-expanded="false">Bagaimana cara mendaftar kegiatan?</button>
+            <div class="faq-jawaban" hidden><p>Pilih kegiatan yang diminati, klik Gabung Sekarang, lalu isi formulir pendaftaran.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-tombol" aria-expanded="false">Apakah ada sertifikat keikutsertaan?</button>
+            <div class="faq-jawaban" hidden><p>Beberapa kegiatan menyediakan sertifikat. Detail tersedia di halaman masing-masing kegiatan.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="section" aria-labelledby="kontak-title">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <p class="eyebrow">Hubungi Kami</p>
+            <h2 id="kontak-title">Ada pertanyaan lain? Kirim pesan.</h2>
+          </div>
+        </div>
+        <form id="form-kontak" class="form-kontak" novalidate>
+          <div class="form-group">
+            <label for="kontak-nama">Nama</label>
+            <input id="kontak-nama" type="text" placeholder="Nama lengkap" aria-describedby="error-nama">
+            <span id="error-nama" class="error-msg" hidden>Nama wajib diisi</span>
+          </div>
+          <div class="form-group">
+            <label for="kontak-email">Email</label>
+            <input id="kontak-email" type="email" placeholder="email@kampus.ac.id" aria-describedby="error-email">
+            <span id="error-email" class="error-msg" hidden>Email wajib diisi</span>
+          </div>
+          <div class="form-group">
+            <label for="kontak-pesan">Pesan</label>
+            <textarea id="kontak-pesan" placeholder="Tuliskan pesanmu..." rows="4" aria-describedby="error-pesan"></textarea>
+            <span id="error-pesan" class="error-msg" hidden>Pesan wajib diisi</span>
+          </div>
+          <button class="button button-primary" type="submit">Kirim Pesan</button>
+          <p id="pesan-sukses" class="pesan-sukses" hidden>✓ Pesan berhasil dikirim! Kami akan segera menghubungi kamu.</p>
+        </form>
+      </div>
+    </section>
+
     <section id="daftar" class="cta-section" aria-labelledby="cta-title">
       <div class="container cta-box">
         <div>
@@ -147,9 +200,16 @@
       <div class="footer-links">
         <a href="#kegiatan">Kegiatan</a>
         <a href="#manfaat">Manfaat</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak">Kontak</a>
         <a href="#daftar">Daftar</a>
       </div>
     </div>
   </footer>
+
+  <button id="ke-atas" hidden aria-label="Kembali ke atas">↑</button>
+  <button id="toggle-tema">Tema Gelap</button>
+
+  <script src="js/app.js" defer></script>
 </body>
 </html>
