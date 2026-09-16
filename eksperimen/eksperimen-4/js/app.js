@@ -32,3 +32,6 @@ function prosesForm(event) {
 } 
   
 form.addEventListener('submit', prosesForm);
+// form.addEventListener('submit', (event) => { 
+// prosesForm(event); 
+// }); 
