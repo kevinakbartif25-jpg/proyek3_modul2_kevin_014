@@ -1,0 +1,27 @@
+/* style.css */
+body {
+  font-family: sans-serif;
+  padding: 1rem;
+  background: #fff;
+  color: #000;
+}
+body.tema-gelap {
+  background: #1a1a1a;
+  color: #fff;
+}
+#detail {
+  margin-top: 0.5rem;
+}
+#error-input {
+  color: red;
+  font-size: 0.85rem;
+}
+#status[data-state="loading"] {
+  color: gray;
+}
+#status[data-state="error"] {
+  color: red;
+}
+#status[data-state="empty"] {
+  color: orange;
+}
